@@ -46,7 +46,7 @@ function Home() {
     </Carousel>
     </div>
     <div>
-    <Button href="./create-routine" className="p-5 m-5" size="lg" variant="success">Create your Routine</Button>
+    <Button href="./create-routine" className="p-5 m-5" size="lg" variant="secondary">Create your Routine</Button>
     </div>
     </center>
   );

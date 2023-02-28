@@ -10,7 +10,9 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 
 function App() {
   return (
-    
+    <div   className="bg-image"
+    style={{
+      backgroundImage: 'url(./images/black_paper.webp)', height: '100vh'}}>
     <Router>
         <Navbar />
         <Routes>
@@ -21,6 +23,7 @@ function App() {
         </Routes>
         <Footer />
     </Router>
+    </div>
   );
 }
 
