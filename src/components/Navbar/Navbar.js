@@ -8,8 +8,8 @@ function NavbarComponent() {
         <Navbar expand="lg" className="shadow-lg mb-5 bg-image"  style={{
           backgroundImage: 'url(./images/black_paper.webp)'}}>
         <Container fluid>
-        <div class="logo-image" style={{width: '46px', height: '46px', borderRadius: '50%', overflow: 'hidden', marginRight: '5px'}}>
-            <img src="./favicon.ico" class="img-fluid" alt="logo"></img>
+        <div className="logo-image" style={{width: '46px', height: '46px', borderRadius: '50%', overflow: 'hidden', marginRight: '5px'}}>
+            <img src="./favicon.ico" className="img-fluid" alt="logo"></img>
         </div>
           <Navbar.Brand className="text-light" href="/">Fit Quest</Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll" />
