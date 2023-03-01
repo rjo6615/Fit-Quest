@@ -6,6 +6,7 @@ import Form from 'react-bootstrap/Form';
 export default function RoutineForm() {
  const [form, setForm] = useState({
    routines: "",
+   askAI: "",
  });
  const navigate = useNavigate();
  
@@ -35,7 +36,7 @@ export default function RoutineForm() {
      return;
    });
  
-   setForm({ routines: "" });
+   setForm({ routines: "", askAI: "" });
    navigate("/routines");
  }
  
@@ -50,12 +51,12 @@ export default function RoutineForm() {
         <Form.Control onChange={(e) => updateForm({ routines: e.target.value })} type="text" placeholder="Enter exercise" />     
       </Form.Group>
 
-      {/* <Form.Group className="mb-3" controlId="formReps">
-        <Form.Label className="text-light">Number of Reps</Form.Label>
-        <Form.Control type="text" placeholder={"Enter reps"} />        
+      <Form.Group className="mb-3" controlId="formAsk">
+        <Form.Label className="text-light">Ask AI</Form.Label>
+        <Form.Control onChange={(e) => updateForm({ askAI: e.target.value })} type="text" placeholder={"Enter workout params"} />        
       </Form.Group>
 
-      <Form.Group className="mb-3" controlId="formSets">
+      {/* <Form.Group className="mb-3" controlId="formSets">
         <Form.Label className="text-light">Number of Sets</Form.Label>
         <Form.Control type="text" placeholder="Enter sets" />     
       </Form.Group> */}

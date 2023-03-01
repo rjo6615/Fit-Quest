@@ -40,6 +40,7 @@ routineRoutes.route("/routines/add").post(function (req, response) {
   let db_connect = dbo.getDb();
   let myobj = {
     routines: req.body.routines,
+    askAI: req.body.askAI,
   };
   db_connect.collection("routines").insertOne(myobj, function (err, res) {
     if (err) throw err;
