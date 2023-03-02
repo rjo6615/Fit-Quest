@@ -7,14 +7,23 @@ import {
   MDBCardText
 } from 'mdb-react-ui-kit';
  
-export default function Edit() {
+export default function SingleRoutine() {
  const [form, setForm] = useState({
    routines: "",
    askAI: "",
  });
+ 
  const params = useParams();
  const navigate = useNavigate();
  
+//  let exerCards = [];
+//  async function newCard() {
+//    exerCards = form.askAI;
+//    console.log(exerCards);
+//    console.log(form);
+//   };
+
+
  useEffect(() => {
    async function fetchData() {
      const id = params.id.toString();
@@ -34,23 +43,30 @@ export default function Edit() {
      }
  
      setForm(record);
+    //  newCard();
    }
  
    fetchData();
- 
+   
    return;
+   
  }, [params.id, navigate]);
  // This following section will display the form that takes input from the user to update the data.
  return (
   <center>
+  <h1 className="text-light">{form.routines}</h1>
+  {/* {exerCards.map((el) => (   */}
   <MDBCard  className="w-50">
   <MDBCardBody>
-    <MDBCardTitle>{form.routines}</MDBCardTitle>
+    <MDBCardTitle>
+      {/* {form.askAI[0].name} */}
+    </MDBCardTitle>
     <MDBCardText>
-      {form.askAI}
+      {/* {form.askAI[0].instructions} */}
     </MDBCardText>
   </MDBCardBody>
 </MDBCard>
+ {/* ))} */}
 </center>
 );
 }
