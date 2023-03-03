@@ -4,6 +4,8 @@ import { useParams, useNavigate } from "react-router";
 import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
+import Button from 'react-bootstrap/Button';
+import Modal from 'react-bootstrap/Modal';
  
 export default function SingleRoutine() {
  const [form, setForm] = useState({
@@ -11,6 +13,9 @@ export default function SingleRoutine() {
    askAI: [{},{},{},{},{},{},{},{},{},{}],
  });
  
+ const [show, setShow] = useState(false);
+ const handleClose = () => setShow(false);
+ const handleShow = () => setShow(true);
  const params = useParams();
  const navigate = useNavigate();
  
@@ -43,7 +48,7 @@ export default function SingleRoutine() {
  // This following section will display the workout data from the db.
  return (
   <center className="pb-4">
-     <div class="container">
+     <div className="container">
      <h1 className="text-light">{form.routines}</h1>
      <h2 className="text-light">{form.askAI[0].type}</h2>
      <Row xs={1} md={2} lg={3} xl={5} className="g-4 mx-4">  
@@ -56,18 +61,24 @@ export default function SingleRoutine() {
      <Card.Subtitle className="mb-2 text-muted">Muscle: {el.muscle}</Card.Subtitle>
      <Card.Subtitle className="mb-2 text-muted">Equipment: {el.equipment}</Card.Subtitle>
      <Card.Subtitle className="mb-2 text-muted">Difficulty: {el.difficulty}</Card.Subtitle>
-     <Card.Text>
-      <h5>
-      <center>Instructions</center>
-      </h5>
+     <Card.Text>  
      {/* {el.instructions} */}
      </Card.Text>
    </Card.Body>
-   {/* <a href={el.link} >
-   <button type="button" class="btn btn-sm mb-3 px-5"
-   style={{color: "white", backgroundColor: "darkblue", borderRadius: 25}}>
-     <strong>View Live Site</strong></button>
-     </a> */}
+      <Button variant="secondary" onClick={handleShow}>
+        View Instructions
+      </Button>
+      <Modal show={show} onHide={handleClose}>
+        <Modal.Header closeButton>
+          <Modal.Title>{el.name}</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>{el.instructions}</Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleClose}>
+            Close
+          </Button>
+        </Modal.Footer>
+      </Modal>
  </Card>            
 </Col>
   ))};
