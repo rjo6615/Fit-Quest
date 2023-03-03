@@ -41,7 +41,7 @@ export default function Auth() {
               </button>
             </div>
             <p className="text-center mt-2">
-              Forgot <a href="#">password?</a>
+              Forgot <a href="#/">password?</a>
             </p>
           </div>
         </form>
@@ -90,7 +90,7 @@ export default function Auth() {
             </button>
           </div>
           <p className="text-center mt-2">
-            Forgot <a href="#">password?</a>
+            Forgot <a href="#/">password?</a>
           </p>
         </div>
       </form>
