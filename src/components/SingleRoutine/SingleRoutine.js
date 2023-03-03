@@ -13,6 +13,10 @@ export default function SingleRoutine() {
    askAI: [{},{},{},{},{},{},{},{},{},{}],
  });
  
+ const [modalData, setModalData] = useState({
+  routines: "",
+  askAI: [{},{},{},{},{},{},{},{},{},{}],
+ });
  const [show, setShow] = useState(false);
  const handleClose = () => setShow(false);
  const handleShow = () => setShow(true);
@@ -65,24 +69,24 @@ export default function SingleRoutine() {
      {/* {el.instructions} */}
      </Card.Text>
    </Card.Body>
-      <Button variant="secondary" onClick={handleShow}>
+      <Button variant="secondary" onClick={() => {handleShow(); setModalData(el);}}>
         View Instructions
-      </Button>
-      <Modal show={show} onHide={handleClose}>
+      </Button>      
+ </Card>            
+</Col>
+  ))};
+  </Row>
+  <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title>{el.name}</Modal.Title>
+          <Modal.Title>{modalData.name}</Modal.Title>
         </Modal.Header>
-        <Modal.Body>{el.instructions}</Modal.Body>
+        <Modal.Body>{modalData.instructions}</Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
             Close
           </Button>
         </Modal.Footer>
       </Modal>
- </Card>            
-</Col>
-  ))};
-  </Row>
   </div>
 </center>
 );
