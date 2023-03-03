@@ -6,8 +6,10 @@ import SingleRoutine from "./components/SingleRoutine/SingleRoutine";
 import Home from "./components/Home/Home";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
+import Auth from "./components/Auth/Auth";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
+import "./App.css";
 
 function App() {
   return (
@@ -18,6 +20,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/auth" element={<Auth />} />
           <Route path="/create-routine" element={<CreateRoutine />} />
           <Route path="/routines" element={<Routines />} />
           <Route path="/single-routine/:id" element={<SingleRoutine />} />
