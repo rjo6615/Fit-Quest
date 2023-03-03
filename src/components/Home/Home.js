@@ -9,24 +9,24 @@ function Home() {
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src="./images/gym.jpg"
+          src="./images/arm_row.jpg"
           alt="First slide"
         />
         <Carousel.Caption>
-          <h3>First slide label</h3>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+          <h3>Start your fitness journey today!</h3>
+          <p>Allow us to help you to reach your goals.</p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src="./images/gym.jpg"
+          src="./images/cardio.jpg"
           alt="Second slide"
         />
 
         <Carousel.Caption>
-          <h3>Second slide label</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <h3>Keep on the move!</h3>
+          <p>Remember only the weak ignore leg day.</p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
@@ -37,10 +37,7 @@ function Home() {
         />
 
         <Carousel.Caption>
-          <h3>Third slide label</h3>
-          <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-          </p>
+          
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>

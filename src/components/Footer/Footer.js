@@ -7,11 +7,11 @@ export default function Footer() {
       backgroundImage: 'url(./images/black_paper.webp)'}}>
       <section className='d-flex justify-content-center p-4 border-bottom'>
         <div className='me-5 d-none d-lg-block'>
-          <span>Get connected with us on social networks:</span>
+          {/* <span>Get connected with us on social networks:</span> */}
         </div>
 
         <div>
-          <a href='#/' className='me-4 text-reset'>
+          {/* <a href='#/' className='me-4 text-reset'>
             <MDBIcon fab icon="facebook-f" />
           </a>
           <a href='#/' className='me-4 text-reset'>
@@ -28,7 +28,7 @@ export default function Footer() {
           </a>
           <a href='#/' className='me-4 text-reset'>
             <MDBIcon fab icon="github" />
-          </a>
+          </a> */}
         </div>
       </section>
 
@@ -41,10 +41,11 @@ export default function Footer() {
                 Fit Quest Company
               </h6>
               <p>
+              Allow us to help you on your fitness journey by giving you workouts based on your goals. Sign up today free of charge to give it a try!
               </p>
             </MDBCol>
 
-            <MDBCol md="2" lg="2" xl="2" className='mx-auto mb-4'>
+            {/* <MDBCol md="2" lg="2" xl="2" className='mx-auto mb-4'>
               <h6 className='text-uppercase fw-bold mb-4'>fdsafda</h6>
               <p>
                 <a href='#!' className='text-reset'>
@@ -90,20 +91,21 @@ export default function Footer() {
                     fdsafs
                 </a>
               </p>
-            </MDBCol>
+            </MDBCol> */}
 
             <MDBCol md="4" lg="3" xl="3" className='mx-auto mb-md-0 mb-4'>
               <h6 className='text-uppercase fw-bold mb-4'>Contact</h6>
               <p>
-                <MDBIcon icon="home" className="me-2" />
-                fdsfdasf
+                <MDBIcon fab icon="github" className="me-2" />
+                <a href= "https://github.com/rjo6615">rjo6615</a>
               </p>
               <p>
-                <MDBIcon icon="envelope" className="me-3" />
-               fdsafdafdaf
+                <MDBIcon fab icon="github" className="me-2" />
+                <a href= "https://github.com/johnboy514">johnboy514</a>
               </p>
               <p>
-                <MDBIcon icon="phone" className="me-3" /> fdsafdsfdsf
+                <MDBIcon fab icon="github" className="me-2" /> 
+                <a href= "https://github.com/rjo6615/Fit-Quest">Fit Quest</a>
               </p>
             </MDBCol>
           </MDBRow>
@@ -113,7 +115,7 @@ export default function Footer() {
       <div className='text-center p-4' style={{ backgroundColor: 'rgba(0, 0, 0, 0.05)' }}>
         © 2023 Copyright:
         <a className='text-reset fw-bold' href='https://github.com/rjo6615'>
-        fdsfdsf
+        If u steal code from this and don't credit us I'll ugly cry :C
         </a>
       </div>
     </MDBFooter>
