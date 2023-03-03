@@ -55,7 +55,6 @@ function test1() {
   console.log(workoutArr);
 }
 
-// let type = "cardio";
 const workoutType = useRef();
  async function API() { 
   const type = workoutType.current.value;
@@ -80,24 +79,26 @@ let url = 'https://api.api-ninjas.com/v1/exercises?type=' + type;
  return (
 <center>
       <h1 className="text-light">Create Routine</h1>
-      <button className="btn btn-link" onClick={() => {API()}}>API</button>
       <br></br>
     <Form onSubmit={onSubmit} className="px-5" style={{ marginBottom: 200, maxWidth: 600, minHeight: 315, borderRadius: 25}}>
+     
       <Form.Group className="mb-3 pt-3" controlId="formExerciseName">
         <Form.Label className="text-light">Name of Exercise</Form.Label>
-        {/* works when test is set as a string */}
         <Form.Control onChange={(e) => updateForm({ routines: e.target.value })} type="text" placeholder="Enter exercise" />     
       </Form.Group>
 
-      <Form.Group className="mb-3" controlId="formAsk">
+      <Form.Group className="mb-3">
         <Form.Label className="text-light">Workout Type</Form.Label>
-        <Form.Control ref={workoutType} type="text" placeholder="Enter workout type" />        
+        <Form.Select ref={workoutType} type="text" placeholder="Enter workout type">
+          <option>cardio</option>
+          <option>olypic_weightliftin</option>
+          <option>plyometrics</option>
+          <option>powerlifting</option>
+          <option>strength</option>
+          <option>stretching</option>
+          <option>strongman</option>
+        </Form.Select>
       </Form.Group>
-
-      {/* <Form.Group className="mb-3" controlId="formSets">
-        <Form.Label className="text-light">Number of Sets</Form.Label>
-        <Form.Control type="text" placeholder="Enter sets" />     
-      </Form.Group> */}
 
       <Button className="mb-3" variant="secondary" type="submit">
         Submit
