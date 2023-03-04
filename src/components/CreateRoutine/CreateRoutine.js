@@ -91,7 +91,7 @@ let url = 'https://api.api-ninjas.com/v1/exercises?type=' + type;
         <Form.Label className="text-light">Workout Type</Form.Label>
         <Form.Select ref={workoutType} type="text" placeholder="Enter workout type">
           <option>cardio</option>
-          <option>olypic_weightliftin</option>
+          <option>olympic_weightlifting</option>
           <option>plyometrics</option>
           <option>powerlifting</option>
           <option>strength</option>
