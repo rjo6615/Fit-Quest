@@ -51,9 +51,6 @@ export default function RoutineForm() {
   headers: { 'x-api-key': 'UJmqxvFPZX01XFomvmpcvw==Wl0sl0iTW5S1MUpN' }
 }
 let workoutArr = [];
-function test1() {
-  console.log(workoutArr);
-}
 
 const workoutType = useRef();
  async function API() { 
@@ -70,8 +67,8 @@ let url = 'https://api.api-ninjas.com/v1/exercises?type=' + type;
         });
         console.log("this one" + workoutArr);
         console.log("this too" + workoutType);
+        // updateform here for routines as well
         updateForm({ askAI: workoutArr });
-        test1();
         return;        
     }
 
@@ -84,6 +81,7 @@ let url = 'https://api.api-ninjas.com/v1/exercises?type=' + type;
      
       <Form.Group className="mb-3 pt-3" controlId="formExerciseName">
         <Form.Label className="text-light">Name of Exercise</Form.Label>
+        {/* ref here */}
         <Form.Control onChange={(e) => updateForm({ routines: e.target.value })} type="text" placeholder="Enter exercise" />     
       </Form.Group>
 

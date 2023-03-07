@@ -74,7 +74,7 @@ export default function SingleRoutine() {
       </Button>      
  </Card>            
 </Col>
-  ))};
+  ))}
   </Row>
   <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
