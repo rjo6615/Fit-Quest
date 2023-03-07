@@ -5,7 +5,7 @@ import Form from 'react-bootstrap/Form';
 import Carousel from 'react-bootstrap/Carousel';
 
 async function loginUser(credentials) {
- return fetch('https://fitquest.herokuapp.com/login', {
+ return fetch('http://localhost:5000/login', {
    method: 'POST',
    headers: {
      'Content-Type': 'application/json'
