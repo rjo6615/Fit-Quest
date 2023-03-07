@@ -3,6 +3,7 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { removeToken } from '../../../src/useToken.js';
+import Button from 'react-bootstrap/Button';
 
 function NavbarComponent() {
     return (
@@ -17,9 +18,9 @@ function NavbarComponent() {
           <Navbar.Collapse id="navbarScroll">
             <Nav className="me-auto my-2 my-lg-0" style={{ maxHeight: '100px' }} navbarScroll>
               <Nav.Link className="text-light" href="/create-routine">Create Routine</Nav.Link>
-              <Nav.Link className="text-light" href="/routines">Routines</Nav.Link>
-              <Nav.Link className="text-light" href="/logout"><button onClick={removeToken}>logout</button></Nav.Link>
+              <Nav.Link className="text-light" href="/routines">Routines</Nav.Link>              
             </Nav>
+            <a className="text-light text-decoration-none" href="/logout"><Button className="float-end" variant="secondary" onClick={removeToken}>logout</Button></a>
           </Navbar.Collapse>
         </Container>
       </Navbar>

@@ -20,13 +20,17 @@ export default function Login({ setToken }) {
   const [password, setPassword] = useState();
 
   const handleSubmit = async e => {
+    if (username && password) {
     e.preventDefault();
     const token = await loginUser({
       username,
       password
     });
     setToken(token);
-  }
+  } else {
+  alert('Failed to log in');
+}
+}
 
   return(
     <center  className="bg-image"

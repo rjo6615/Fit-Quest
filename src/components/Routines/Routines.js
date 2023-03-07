@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import Button from 'react-bootstrap/Button';
  
 const Record = (props) => (
  <tr>
@@ -7,9 +8,9 @@ const Record = (props) => (
    <td></td>
    <td></td>
    <td>
-     <Link className="btn btn-link" to={`/edit/${props.record._id}`}>Edit</Link> |
-     <button className="btn btn-link" onClick={() => {props.deleteRecord(props.record._id);}}>Delete</button>|
-     <Link className="btn btn-link" to={`/single-routine/${props.record._id}`}>View</Link> 
+     {/* <Link className="btn btn-link" to={`/edit/${props.record._id}`}>Edit</Link> | */}
+     <Button variant="danger" onClick={() => {props.deleteRecord(props.record._id);}}>Delete</Button>
+     <Link className="btn btn-link" to={`/single-routine/${props.record._id}`}><Button variant="secondary">View</Button></Link>     
    </td>
  </tr>
 );
@@ -62,7 +63,8 @@ export default function RecordList() {
  
  // This following section will display the table with the records of individuals.
  return (
-   <div>
+  <center>
+   <div className="px-5 w-50">
      <h3 className="text-light">Routine List</h3>
      <table className="table text-light" style={{ marginTop: 20 }}>
        <thead>
@@ -76,5 +78,6 @@ export default function RecordList() {
        <tbody>{recordList()}</tbody>
      </table>
    </div>
+   </center>
  );
 }
