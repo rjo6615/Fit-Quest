@@ -32,7 +32,7 @@ export default function Login({ setToken }) {
     style={{
       backgroundImage: 'url(./images/black_paper.webp)', height: '100vh'}}>
      <Form  className="w-25 pt-5" onSubmit={handleSubmit}>
-        <h1 className='text-light'>Login</h1>
+        <h1 className='text-light'>Welcome to Fit-Quest please login</h1>
      <Form.Group className="mb-3" controlId="formUsername">
        <Form.Label>Username</Form.Label>
        <Form.Control type="text"  onChange={e => setUserName(e.target.value)} placeholder="Enter username" />
