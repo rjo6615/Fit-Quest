@@ -20,7 +20,7 @@ function NavbarComponent() {
               <Nav.Link className="text-light" href="/create-routine">Create Routine</Nav.Link>
               <Nav.Link className="text-light" href="/routines">Routines</Nav.Link>              
             </Nav>
-            <Button className="float-end" variant="secondary" onClick={removeToken}><a className="text-light text-decoration-none" href="/logout">logout</a></Button>
+            <a className="text-light text-decoration-none" href="/logout"><Button className="float-end" variant="secondary" onClick={removeToken}>logout</Button></a>
           </Navbar.Collapse>
         </Container>
       </Navbar>
