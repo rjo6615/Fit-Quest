@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
+import Carousel from 'react-bootstrap/Carousel';
 
 async function loginUser(credentials) {
  return fetch('http://localhost:5000/login', {
@@ -31,6 +32,41 @@ export default function Login({ setToken }) {
     <center  className="bg-image"
     style={{
       backgroundImage: 'url(./images/black_paper.webp)', height: '100vh'}}>
+         <div className="w-50">
+    <Carousel className='pt-5'>
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          src="./images/arm_row.jpg"
+          alt="First slide"
+        />
+        <Carousel.Caption>
+          <h3>Start your fitness journey today!</h3>
+          <p>Allow us to help you to reach your goals.</p>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          src="./images/cardio.jpg"
+          alt="Second slide"
+        />
+        <Carousel.Caption>
+          <h3>Keep on the move!</h3>
+          <p>Remember only the weak ignore leg day.</p>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          src="./images/gym.jpg"
+          alt="Third slide"
+        />
+        <Carousel.Caption>          
+        </Carousel.Caption>
+      </Carousel.Item>
+    </Carousel>
+    </div>
      <Form  className="w-25 pt-5" onSubmit={handleSubmit}>
         <h1 className='text-light'>Login</h1>
      <Form.Group className="mb-3" controlId="formUsername">
@@ -46,6 +82,8 @@ export default function Login({ setToken }) {
        Submit
      </Button>
    </Form>
+
+  
    </center>
   )
 }
