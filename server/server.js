@@ -7,8 +7,6 @@ app.use(cors());
 app.use(express.json());
 app.use(require("./routes/routines"));
 
-express.static(path_join(__dirname, '../client/src'));
-
 app.use('/login', (req, res) => {
   res.send({
     token: 'fitQuestUser'
