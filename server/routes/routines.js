@@ -49,7 +49,7 @@ routineRoutes.route("/routines/add").post(function (req, response) {
  });
 
  // This section will help you delete a record
-routineRoutes.route("/:id").delete((req, response) => {
+routineRoutes.route("/delete-routine/:id").delete((req, response) => {
   let db_connect = dbo.getDb();
   let myquery = { _id: ObjectId(req.params.id) };
   db_connect.collection("routines").deleteOne(myquery, function (err, obj) {
