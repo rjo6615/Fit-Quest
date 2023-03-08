@@ -6,7 +6,7 @@ const port = process.env.PORT || 5000;
 app.use(cors());
 app.use(express.json());
 app.use(require("./routes/routines"));
-// const path = require('path')
+const path = require('path')
 // app.use('/', express.static(path.join(__dirname, '../client/src')));
 app.use(express.static('../client/src'));
 app.get('*', (req, res) => res.sendFile(path.resolve('../client/src', 'index.js')));
