@@ -7,9 +7,10 @@ app.use(cors());
 app.use(express.json());
 app.use(require("./routes/routines"));
 const path = require('path')
-app.use(express.static('client'));
-// app.get('*', (req, res) => 
-// res.sendFile(path.join(__dirname, "./client/build/index.html")));
+
+app.use(express.static('client/build'));
+app.get('*', (req, res) => 
+res.sendFile(path.join(__dirname, "./client/build/App.js")));
 
 
 app.use('/login', (req, res) => {
