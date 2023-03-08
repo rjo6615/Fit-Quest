@@ -42,7 +42,7 @@ export default function RoutineForm() {
    });
  
    setForm({ routines: "", askAI: "" });
-   navigate("/routines");
+   navigate("/showRoutines");
  }
 
 //API call
