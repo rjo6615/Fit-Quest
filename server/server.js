@@ -9,7 +9,7 @@ app.use(require("./routes/routines"));
 const path = require('path')
 // app.use('/', express.static(path.join(__dirname, '../client/src')));
 app.use(express.static('../client/src'));
-app.get('*', (req, res) => res.sendFile(path.resolve('../client/src', 'app.js')));
+app.get('*', (req, res) => res.sendFile(path.resolve('../client/src', 'App.js')));
 
 
 app.use('/login', (req, res) => {
