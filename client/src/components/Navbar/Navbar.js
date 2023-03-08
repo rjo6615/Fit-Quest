@@ -2,7 +2,7 @@ import React from "react";
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import { removeToken } from '../../../src/useToken.js';
+import { removeToken } from '../../useToken.js';
 import Button from 'react-bootstrap/Button';
 
 function NavbarComponent() {
