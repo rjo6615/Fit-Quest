@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router,  Route,  Routes,  Navigate} from "react-router-dom";
+import {Router,  Route,  Routes,  Navigate} from "react-router-dom";
 import CreateRoutine from "./components/CreateRoutine/CreateRoutine";
 import Routines from "./components/Routines/Routines";
 import SingleRoutine from "./components/SingleRoutine/SingleRoutine";
