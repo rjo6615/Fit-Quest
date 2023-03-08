@@ -26,7 +26,7 @@ function App() {
     <Router>
         <Navbar />
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/home" element={<Home />} />
           <Route path="/create-routine" element={<CreateRoutine />} />
           <Route path="/routines" element={<Routines />} />
           <Route path="/single-routine/:id" element={<SingleRoutine />} />
