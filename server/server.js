@@ -7,9 +7,8 @@ app.use(cors());
 app.use(express.json());
 app.use(require("./routes/routines"));
 const path = require('path')
-// app.use('/', express.static(path.join(__dirname, '../client/src')));
-app.use(express.static('../client/src'));
-app.get('*', (req, res) => res.sendFile(path.resolve('../client/src', 'App.js')));
+app.use(express.static('../client/public'));
+app.get('*', (req, res) => res.sendFile(path.resolve('../client/public', 'index.html')));
 
 
 app.use('/login', (req, res) => {
