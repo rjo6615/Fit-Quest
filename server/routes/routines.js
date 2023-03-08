@@ -17,7 +17,7 @@ routineRoutes.route("/routines/:id").get(function (req, res) {
 
 // This section will get a list of all the routines.
 routineRoutes.route("/routines").get(function (req, res) {
-    let db_connect = dbo.getDb("fitquestdb");
+    let db_connect = dbo.getDb();
     db_connect
       .collection("routines")
       .find({})
