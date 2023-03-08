@@ -1,17 +1,9 @@
-const express = require("express");
- 
-// recordRoutes is an instance of the express router.
-// We use it to define our routes.
-// The router will be added as a middleware and will take control of requests starting with path /record.
-const routineRoutes = express.Router();
- 
-// This will help us connect to the database
-const dbo = require("../db/conn");
- 
-// This help convert the id from string to ObjectId for the _id.
+const express = require("express"); 
+const routineRoutes = express.Router(); 
+const dbo = require("../db/conn"); 
 const ObjectId = require("mongodb").ObjectId;
 
-// This section will help you get a single record by id
+// This section will get a single routine by id
 routineRoutes.route("/routines/:id").get(function (req, res) {
     let db_connect = dbo.getDb();
     let myquery = { _id: ObjectId(req.params.id) };
@@ -23,7 +15,7 @@ routineRoutes.route("/routines/:id").get(function (req, res) {
       });
    });
 
-// This section will help you get a list of all the records.
+// This section will get a list of all the routines.
 routineRoutes.route("/routines").get(function (req, res) {
     let db_connect = dbo.getDb("fitquestdb");
     db_connect
@@ -35,7 +27,7 @@ routineRoutes.route("/routines").get(function (req, res) {
       });
    });
 
-// This section will help you create a new record.
+// This section will create a new routine.
 routineRoutes.route("/routines/add").post(function (req, response) {
   let db_connect = dbo.getDb();
   let myobj = {
@@ -48,7 +40,7 @@ routineRoutes.route("/routines/add").post(function (req, response) {
   });
  });
 
- // This section will help you delete a record
+ // This section will delete a routine
 routineRoutes.route("/delete-routine/:id").delete((req, response) => {
   let db_connect = dbo.getDb();
   let myquery = { _id: ObjectId(req.params.id) };
