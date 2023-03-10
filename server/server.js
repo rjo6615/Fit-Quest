@@ -6,7 +6,14 @@ const port = process.env.PORT || 5000;
 app.use(cors());
 app.use(express.json());
 app.use(require("./routes/routines"));
+const path = require('path')
 
+app.use(express.static('client/build'));
+
+
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../client/build/index.html'));
+});
 
 
 app.use('/login', (req, res) => {

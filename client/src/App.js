@@ -28,7 +28,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/create-routine" element={<CreateRoutine />} />
-          <Route path="/routines" element={<Routines />} />
+          <Route path="/showRoutines" element={<Routines />} />
           <Route path="/single-routine/:id" element={<SingleRoutine />} />
           <Route path="*" element={<Navigate to="/"/>} />
         </Routes>
